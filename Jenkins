@@ -1,0 +1,25 @@
+nœud{
+
+stage('Cloner') {
+
+git 'https://github.com/jkibari2/ansible-jenkins.git'
+
+}
+
+stage('Ansible') {
+
+ansiblePlaybook (
+
+colorisé : vrai,
+
+devenir vrai,
+
+playbook : 'playbook.yml',
+
+inventaire : 'hosts.yml'
+
+)
+
+}
+
+}
